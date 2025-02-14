@@ -33,6 +33,7 @@ body {
     background: transparent;
     padding: 5px 20px;
     z-index: 10;
+    margin-left: 20px; /* Ensure it starts on the left side */
 }
 
 /* Category Flexbox & Scrolling */
@@ -40,7 +41,7 @@ body {
     display: flex;
     gap: 15px;
     overflow-x: auto;
-    padding-left: 20px; /* Make sure icons align correctly */
+    padding-left: 20px; /* Align the icons properly to the left */
     padding-right: 20px;
     scrollbar-width: none;
     -ms-overflow-style: none;
@@ -48,6 +49,7 @@ body {
     align-items: center;
     width: 100%;
     height: 320px; /* Set a height for each category to make it scrollable */
+    margin-left: 20px; /* Align the scrolling content to match the title */
 }
 
 /* Remove scrollbar visually */

@@ -81,6 +81,12 @@ body {
     letter-spacing: 2px;
 }
 
+/* Center Hall of Fame Icons */
+.hall-of-fame .icon-grid {
+    justify-content: center;
+}
+
+
 /* Game Grid */
 .icon-grid {
     display: flex;

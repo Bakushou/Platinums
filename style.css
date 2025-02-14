@@ -39,17 +39,23 @@ a:hover {
 
 /* Category Styling */
 .category {
-    margin: 40px auto;
+    margin: 20px 0;
     padding: 20px;
     background: rgba(255, 255, 255, 0.2);
     border-radius: 10px;
-    max-width: 80%;
+    overflow-x: auto;
+    white-space: nowrap;
+    display: flex;
+    gap: 15px;
+    padding-bottom: 10px;
 }
 
 .category h2 {
     font-size: 2em;
     margin-bottom: 10px;
     text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
 }
 
 /* Platinum Category - Glistening Effect */
@@ -93,17 +99,15 @@ a:hover {
 
 /* Game Grid */
 .icon-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 15px;
+    padding: 10px;
 }
 
 .icon {
-    width: 300px;
-    height: 300px;
+    width: 220px;
+    height: 220px;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);

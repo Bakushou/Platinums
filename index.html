@@ -1,88 +1,167 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Bakushou's Platinums" />
-    <meta property="og:description" content="Suffering and Agony" />
-    <meta property="og:url" content="https://bakushou.github.io/Platinums/" />
-    <meta property="og:image" content="https://raw.githubusercontent.com/SeesawEffectt/platinum-blog/main/tama.png" />
-    <title>Bakushou's Games</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body>
+/* General Reset */
+body {
+    background: linear-gradient(to bottom, #6677aa, #8855aa);
+    background-attachment: fixed;
+    background-size: cover;
+    color: #333;
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
 
+/* Category Styling */
+.category {
+    margin: 20px 0;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    overflow-x: auto;
+    white-space: nowrap;
+    display: flex;
+    gap: 15px;
+    padding-bottom: 10px;
+    scrollbar-width: none; /* Hide scrollbar */
+    -ms-overflow-style: none;
+    cursor: grab;
+}
+.category::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for Chrome, Safari */
+}
 
-<div class="category platinum">
-    <h2>Platinum</h2>
-    <div class="icon-grid">
-        <div class="icon"><img src="HollowKnight.png"><div class="info">Hollow Knight<br>All Endings<br>119 Hours</div></div>
-        <div class="icon"><img src="Celeste.png"><div class="info">Celeste<br>All Strawberries & Cassettes<br>517 Hours</div></div>
-        <div class="icon"><img src="MinecraftDungeons.png"><div class="info">Minecraft Dungeons<br>100% Apocalypse<br>55 Hours</div></div>
-        <div class="icon"><img src="Undertale.png"><div class="info">Undertale<br>All Routes<br>32 Hours</div></div>
-        <div class="icon"><img src="RiskofRain2.png"><div class="info">Risk of Rain 2<br>100% Logbook<br>143 Hours</div></div>
-        <div class="icon"><img src="SlaythePrincessThePristineCut.png"><div class="info">Slay the Princess: The Pristine Cut<br>All Endings<br>35 Hours</div></div>
-        <div class="icon"><img src="Cuphead.png"><div class="info">Cuphead<br>All Bosses S-Rank<br>212 Hours</div></div>
-        <div class="icon"><img src="Terraria.png"><div class="info">Terraria<br>100%<br>227 Hours</div></div>
-        <div class="icon"><img src="Inscryption.png"><div class="info">Inscryption<br>Kaycee's Mod<br>104 Hours</div></div>
-        <div class="icon"><img src="Omori.png"><div class="info">Omori<br>All Endings<br>73 Hours</div></div>
-        <div class="icon"><img src="BloonsTowerDefense6.png"><div class="info">Bloons Tower Defense 6<br>All Black Borders<br>580 Hours</div></div>
-        <div class="icon"><img src="VRising.png"><div class="info">V Rising<br>All Bosses 100%<br>76 Hours</div></div>
-        <div class="icon"><img src="Muck.png"><div class="info">Muck<br>All Achievement Runs<br>109 Hours</div></div>
-    </div>
-</div>
+.category:active {
+    cursor: grabbing;
+}
 
-<div class="category completed">
-    <h2>Completed</h2>
-    <div class="icon-grid">
-        <div class="icon"><img src="Cyberpunk2077.png"><div class="info">Cyberpunk 2077<br>All Endings<br>218 Hours</div></div>
-        <div class="icon"><img src="Ghostrunner.png"><div class="info">Ghostrunner<br>100%<br>15 Hours</div></div>
-        <div class="icon"><img src="Ghostrunner2.png"><div class="info">Ghostrunner 2<br>100%<br>16 Hours</div></div>
-        <div class="icon"><img src="DokiDokiLiteratureClubPlus.png"><div class="info">Doki Doki Literature Club+<br>All Endings & Secrets<br>15 Hours</div></div>
-        <div class="icon"><img src="SlaythePrincess.png"><div class="info">Slay the Princess<br>All Endings<br>19 Hours</div></div>
-        <div class="icon"><img src="TheEscapists2.png"><div class="info">The Escapists 2<br>All Levels<br>63 Hours</div></div>
-        <div class="icon"><img src="MountBladeIIBannerlord.png"><div class="info">Mount & Blade II - Bannerlord<br>108 Hours</div></div>
-        <div class="icon"><img src="NeonWhite.png"><div class="info">Neon White<br>All Levels Red Medals<br>48 Hours</div></div>
-        <div class="icon"><img src="WizardofLegend.png"><div class="info">Wizard of Legend<br>Full Spellbook & All Items<br>88 Hours</div></div>
-    </div>
-</div>
+.category h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-family: "Merriweather", serif;
+    text-align: left;
+    padding-left: 20px;
+}
 
-<div class="category dlc">
-    <h2>DLC</h2>
-    <div class="icon-grid">
-        <div class="icon"><img src="PhantomLiberty.png"><div class="info">Phantom Liberty<br>All Endings<br>32 Hours</div></div>
-        <div class="icon"><img src="GodsNightmares.png"><div class="info">Gods & Nightmares<br>Nightmare King Grimm<br>16 Hours</div></div>
-        <div class="icon"><img src="Godmaster.png"><div class="info">Godmaster<br>Radiant Hall of Gods & All Bindings Pantheons<br>240 Hours</div></div>
-        <div class="icon"><img src="RiskofRainSurvivorsoftheVoid.png"><div class="info">Risk of Rain Survivors of the Void<br>100%</div></div>
-        <div class="icon"><img src="RiskofRainSeekersoftheStorm.png"><div class="info">Risk of Rain Seekers of the Storm<br>100%</div></div>
-        <div class="icon"><img src="CupheadTheDeliciousLastCourse.png"><div class="info">Cuphead: The Delicious Last Course<br>All Bosses S-Rank</div></div>
-    </div>
-</div>
+/* Platinum Category - Glistening Text Effect */
+.platinum {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #5a8dee;
+    background: linear-gradient(90deg, #5a8dee, #a3bcd4, #5a8dee);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: glisten 3s linear infinite;
+}
 
-<div class="category hall-of-fame">
-    <h2>Hall of Fame</h2>
-    <div class="icon-grid">
-        <div class="icon">
-            <img src="PantheonofHallownest.png">
-            <div class="info">
-                Pantheon of Hallownest<br>
-                All Bindings<br>
-                750 Hours<br>
-                <img src="team_hitless_logo.png" width="30">
-            </div>
-        </div>
+@keyframes glisten {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
 
-        <div class="icon">
-            <img src="MinecraftDungeons.png">
-            <div class="info">
-                Minecraft Dungeons<br>
-                All Uniques 108 Power<br>
-                900 Hours<br>
-                <img src="crown.png" width="30">
-            </div>
-        </div>
+/* Completed Category - Luxurious Gold */
+.completed {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #e6c200;
+    text-shadow: 0 0 5px #e6c200, 0 0 10px #9e8200;
+}
 
-        <div class="icon"><img src="StickFightTheGame.png"><div class="info">Stick Fight: The Game<br>Ranked X14<br>468 Hours</div></div>
-    </div>
-</div>
+/* DLC Category - More Noticeable */
+.dlc {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #4488ff;
+}
+
+/* Hall of Fame - Elegant Font, No Glow */
+.hall-of-fame {
+    font-size: 3em;
+    font-weight: bold;
+    color: #ffcc00;
+    font-family: "Garamond", serif;
+    letter-spacing: 2px;
+    text-align: left;
+}
+
+/* Game Grid */
+.icon-grid {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 15px;
+    padding: 10px;
+}
+
+.icon {
+    width: 120px; /* Adjusted smaller size */
+    height: 120px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    position: relative;
+}
+
+.icon:hover {
+    transform: scale(1.1);
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Tooltip Styling */
+.icon .info {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    font-size: 0.8em; /* Adjusted for smaller size */
+    padding: 5px;
+    border-radius: 5px;
+    width: 90%;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.icon:hover .info {
+    display: block;
+    opacity: 1;
+}
+
+/* Crown and Hitless Logo - Small and Cutout Effect */
+.icon .badge {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 15px; /* Even smaller */
+    height: 15px;
+    mix-blend-mode: difference;
+    opacity: 0.8;
+}
+
+/* Make text scroll with icons */
+.category-container {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+}
+
+.category h2 {
+    position: sticky;
+    top: 0;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 5px 0;
+    z-index: 10;
+}

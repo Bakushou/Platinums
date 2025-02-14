@@ -9,14 +9,17 @@ body {
     padding: 0;
     text-align: center;
 }
-/* Category Container Styling */
-.category-container {
+
+/* Category Styling */
+.category {
     display: flex;
     flex-direction: column;
-    position: relative;
-    padding-top: 30px;
+    align-items: center;
+    margin-bottom: 20px; /* Reduce spacing between categories */
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
-/* Category Title Styling */
+
 .category h2 {
     font-size: 1.4em;
     text-transform: uppercase;
@@ -24,107 +27,88 @@ body {
     letter-spacing: 1px;
     font-family: "Playfair Display", serif;
     text-align: left;
-    position: sticky;
-    top: 0;
-    background: transparent;
-    padding: 8px 20px; /* Reduced padding for closer spacing */
-    margin-left: 20px;
-    margin-bottom: 2px; /* Tighter margin */
-    z-index: 10;
+    margin-bottom: 10px; /* Reduce space below category titles */
 }
-/* Category Flexbox & Scrolling */
-.category {
-    display: flex;
-    flex-direction: column;
-    gap: 2px; /* Further reduced vertical space between categories */
-    overflow-x: auto;
-    padding-left: 10px; /* Reduced left padding */
-    padding-right: 10px; /* Reduced right padding */
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-    cursor: grab;
-    align-items: center;
-    width: 100%;
+
+/* Hall of Fame Centering */
+.hall-of-fame .icon-grid {
+    justify-content: center;
 }
-/* Remove scrollbar visually */
-.category::-webkit-scrollbar {
-    display: none;
-}
-.category:active {
-    cursor: grabbing;
-}
+
 /* Platinum Category - Standout Blue */
 .platinum {
     color: #78aaff;
 }
+
 /* Completed Category - Luxurious Gold */
 .completed {
     color: #caa145;
 }
-/* DLC Category - More Noticeable */
+
+/* DLC Category - Noticeable Blue */
 .dlc {
     color: #4a8cff;
 }
+
 /* Hall of Fame - Unique and Professional */
 .hall-of-fame {
     color: #ffcc00;
     font-family: "Garamond", serif;
     letter-spacing: 2px;
 }
-/* Center Hall of Fame Icons */
-.hall-of-fame .icon-grid {
-    justify-content: center;
-}
+
 /* Game Grid */
 .icon-grid {
     display: flex;
-    flex-wrap: nowrap;
-    gap: 5px; /* Reduced gap between icons */
-    padding: 0 10px; /* Reduced padding */
-    align-items: center;
-    overflow: visible;
-    width: 100%;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center; /* Align icons properly */
+    padding: 20px 10px; /* Reduce padding */
 }
-/* Icon Styling */
+
 .icon {
     width: 160px;
     height: 160px;
     border-radius: 10px;
-    overflow: hidden;
+    overflow: visible; /* Allow pop-out tooltips */
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out;
     position: relative;
-    flex-shrink: 0;
 }
-/* Hover effect for icons */
+
 .icon:hover {
     transform: scale(1.4);
     box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.3);
     z-index: 20;
 }
-/* Icon image styling */
+
 .icon img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
+
 /* Tooltip Styling */
 .icon .info {
     display: none;
-@@ -148,20 +22,3 @@ body {
+    position: absolute;
+    bottom: -30px; /* Move it down slightly */
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    font-size: 0.6em;
+    padding: 4px;
+    border-radius: 5px;
+    width: max-content;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+    white-space: nowrap; /* Prevents text wrapping */
+    z-index: 50; /* Ensures it appears above other elements */
+}
+
+.icon:hover .info {
     display: block;
     opacity: 1;
-}
-/* Mouse drag scrolling functionality */
-.category {
-    overflow-x: scroll;
-    scroll-behavior: smooth;
-}
-.category:hover {
-    cursor: grab;
-}
-.category .icon-grid {
-    display: flex;
-    gap: 5px; /* Even tighter spacing between icons */
-    align-items: center;
 }

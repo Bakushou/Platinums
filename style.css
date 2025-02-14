@@ -1,0 +1,54 @@
+body {
+    background-color: #0070D1;
+  }
+  
+  h1 {
+    text-align: center;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+  }
+
+  p {
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-size: 20px;
+    text-align: center;
+    text-shadow: 2px 2px #ED9E9F;
+  }
+
+  div {
+    text-align: center;
+  }
+
+  h2 {
+    text-align: center;
+    font-size: 60px;
+    color: red;
+  }
+
+a:link {
+    color:orange;
+    font-family: verdana, cursive;
+}
+a:visited {
+    color:orange;
+    font-family: verdana, cursive;
+}
+
+img {
+  aspect-ratio: 1;
+  object-fit: fill;
+}
+
+.icon-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 250px); /* 5 equal-width columns */
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon {
+  width: 250px; /* Set a fixed width for the icons */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

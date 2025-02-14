@@ -8,7 +8,6 @@ body {
     margin: 0;
     padding: 0;
     text-align: center;
-    overflow: hidden;
 }
 
 /* Category Container Styling */
@@ -16,7 +15,7 @@ body {
     display: flex;
     flex-direction: column;
     position: relative;
-    padding-top: 30px;
+    padding-top: 30px; /* Keeps room for scaling */
 }
 
 /* Category Title Styling */
@@ -32,25 +31,23 @@ body {
     background: transparent;
     padding: 8px 20px; /* Reduced padding for closer spacing */
     margin-left: 20px;
-    margin-bottom: 0; /* No space below title */
+    margin-bottom: 0; /* Removed margin below title */
     z-index: 10;
 }
 
 /* Category Flexbox & Scrolling */
 .category {
     display: flex;
-    gap: 10px; /* Reduced gap between items */
+    flex-direction: column;
+    gap: 5px; /* Reduced vertical space between categories */
     overflow-x: auto;
-    padding-left: 10px; /* Removed extra left padding */
-    padding-right: 10px; /* Removed extra right padding */
+    padding-left: 10px; /* Reduced left padding */
+    padding-right: 10px; /* Reduced right padding */
     scrollbar-width: none;
     -ms-overflow-style: none;
     cursor: grab;
     align-items: center;
     width: 100%;
-    height: 300px; /* Adjusted height to be consistent */
-    flex-wrap: nowrap;
-    margin-bottom: 5px; /* Reduced space between categories */
 }
 
 /* Remove scrollbar visually */
@@ -88,7 +85,7 @@ body {
 .icon-grid {
     display: flex;
     flex-wrap: nowrap;
-    gap: 8px; /* Even tighter spacing between icons */
+    gap: 8px; /* Reduced gap between icons */
     padding: 0 10px; /* Reduced padding */
     align-items: center;
     overflow: visible;

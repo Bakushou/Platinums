@@ -30,16 +30,16 @@ body {
     position: sticky;
     top: 0;
     background: transparent;
-    padding: 10px 20px; /* Added padding for better alignment */
+    padding: 8px 20px; /* Reduced padding for closer spacing */
     margin-left: 20px;
-    margin-bottom: 5px; /* Reduced space below title */
+    margin-bottom: 0; /* No space below title */
     z-index: 10;
 }
 
 /* Category Flexbox & Scrolling */
 .category {
     display: flex;
-    gap: 15px;
+    gap: 10px; /* Reduced gap between items */
     overflow-x: auto;
     padding-left: 10px; /* Removed extra left padding */
     padding-right: 10px; /* Removed extra right padding */
@@ -48,8 +48,9 @@ body {
     cursor: grab;
     align-items: center;
     width: 100%;
-    height: 300px; /* Adjusted category height */
+    height: 300px; /* Adjusted height to be consistent */
     flex-wrap: nowrap;
+    margin-bottom: 5px; /* Reduced space between categories */
 }
 
 /* Remove scrollbar visually */
@@ -87,8 +88,8 @@ body {
 .icon-grid {
     display: flex;
     flex-wrap: nowrap;
-    gap: 10px; /* Reduced the gap between icons */
-    padding: 0 20px; /* Removed extra padding */
+    gap: 8px; /* Even tighter spacing between icons */
+    padding: 0 10px; /* Reduced padding */
     align-items: center;
     overflow: visible;
     width: 100%;
@@ -155,7 +156,7 @@ body {
 
 .category .icon-grid {
     display: flex;
-    gap: 10px;
+    gap: 8px; /* Even tighter spacing between icons */
     align-items: center;
 }
 

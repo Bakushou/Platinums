@@ -1,54 +1,66 @@
+/* General Reset */
 body {
-    background-color: #0070D1;
-  }
-  
-  h1 {
+    background: linear-gradient(to bottom, #cce7ff, #f3e7ff); /* Soft pastel blue to lavender */
+    color: #333; /* Dark gray for better readability */
+    font-family: "Inter", sans-serif; /* Clean and modern font */
+    margin: 0;
+    padding: 0;
     text-align: center;
-    font-family: "Comic Sans MS", "Comic Sans", cursive;
-  }
-
-  p {
-    font-family: "Comic Sans MS", "Comic Sans", cursive;
-    font-size: 20px;
-    text-align: center;
-    text-shadow: 2px 2px #ED9E9F;
-  }
-
-  div {
-    text-align: center;
-  }
-
-  h2 {
-    text-align: center;
-    font-size: 60px;
-    color: red;
-  }
-
-a:link {
-    color:orange;
-    font-family: verdana, cursive;
-}
-a:visited {
-    color:orange;
-    font-family: verdana, cursive;
 }
 
-img {
-  aspect-ratio: 1;
-  object-fit: fill;
+/* Header Styling */
+h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #4a4e69; /* Calming muted purple */
+    margin-top: 20px;
 }
 
+/* Paragraph Styling */
+p {
+    font-size: 1.2em;
+    text-shadow: 1px 1px #888;
+    color: #555;
+}
+
+/* Links */
+a:link, a:visited {
+    color: #6d597a; /* Deep muted purple */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #ff9e9d; /* Soft red-pink accent */
+}
+
+/* Game Grid */
 .icon-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, 250px); /* 5 equal-width columns */
-  gap: 10px;
-  justify-content: center;
-  align-items: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
 }
 
 .icon {
-  width: 250px; /* Set a fixed width for the icons */
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.icon:hover {
+    transform: scale(1.05);
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }

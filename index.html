@@ -79,3 +79,36 @@
         <div class="icon"><img src="StickFightTheGame.png"><div class="info">Stick Fight: The Game<br>Ranked X14<br>468 Hours</div></div>
     </div>
 </div>
+
+    <script>
+document.querySelectorAll('.category').forEach(category => {
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+
+    category.addEventListener('mousedown', (e) => {
+        isDown = true;
+        category.classList.add('active');
+        startX = e.pageX - category.offsetLeft;
+        scrollLeft = category.scrollLeft;
+    });
+
+    category.addEventListener('mouseleave', () => {
+        isDown = false;
+        category.classList.remove('active');
+    });
+
+    category.addEventListener('mouseup', () => {
+        isDown = false;
+        category.classList.remove('active');
+    });
+
+    category.addEventListener('mousemove', (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - category.offsetLeft;
+        const walk = (x - startX) * 2; // Adjust scroll speed
+        category.scrollLeft = scrollLeft - walk;
+    });
+});
+</script>

@@ -15,8 +15,8 @@ body {
     display: flex;
     flex-direction: column;
     position: relative;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .category-title {
@@ -35,7 +35,7 @@ body {
     flex-wrap: wrap;
     justify-content: flex-start;
     gap: 15px;
-    padding-left: 50px; /* Adjusted closer to the left edge */
+    padding-left: 250px;
     scrollbar-width: none;
     -ms-overflow-style: none;
     cursor: grab;

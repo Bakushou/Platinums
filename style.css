@@ -1,53 +1,31 @@
 /* General Reset */
 body {
-    background: linear-gradient(to bottom, #cce7ff, #f3e7ff);
-    background-attachment: fixed; /* Ensures a smooth, non-repeating gradient */
+    background: linear-gradient(to bottom, #99c2ff, #d9a3ff);
+    background-attachment: fixed;
     background-size: cover;
-    color: #333; /* Dark gray for better readability */
-    font-family: "Inter", sans-serif; /* Clean and modern font */
+    color: #333;
+    font-family: "Poppins", sans-serif;
     margin: 0;
     padding: 0;
     text-align: center;
-}
-
-/* Header Styling */
-h1 {
-    font-size: 2.5em;
-    font-weight: bold;
-    color: #4a4e69; /* Calming muted purple */
-    margin-top: 20px;
-}
-
-/* Paragraph Styling */
-p {
-    font-size: 1.2em;
-    text-shadow: 1px 1px #888;
-    color: #555;
-}
-
-/* Links */
-a:link, a:visited {
-    color: #6d597a; /* Deep muted purple */
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s;
-}
-
-a:hover {
-    color: #ff9e9d; /* Soft red-pink accent */
 }
 
 /* Category Styling */
 .category {
     margin: 20px 0;
     padding: 20px;
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
     overflow-x: auto;
     white-space: nowrap;
     display: flex;
     gap: 15px;
     padding-bottom: 10px;
+    scrollbar-width: none; /* Hide scrollbar */
+    -ms-overflow-style: none;
+}
+.category::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for Chrome, Safari */
 }
 
 .category h2 {
@@ -56,13 +34,18 @@ a:hover {
     text-transform: uppercase;
     font-weight: bold;
     letter-spacing: 1px;
+    font-family: "Playfair Display", serif;
 }
 
-/* Platinum Category - Glistening Effect */
+/* Platinum Category - Glistening Text Effect */
 .platinum {
-    color: #E5E4E2;
-    background: linear-gradient(90deg, #E5E4E2, #C0C0C0, #E5E4E2);
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #B0C4DE;
+    background: linear-gradient(90deg, #B0C4DE, #E5E4E2, #B0C4DE);
     background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     animation: glisten 3s linear infinite;
 }
 
@@ -72,29 +55,29 @@ a:hover {
     100% { background-position: 0% 50%; }
 }
 
-/* Completed Category - Gold */
+/* Completed Category - Luxurious Gold */
 .completed {
-    color: gold;
-}
-
-/* DLC Category - Unique Color */
-.dlc {
-    color: #66CCFF; /* Light blue */
-}
-
-/* Hall of Fame - Flashiest Text */
-.hall-of-fame {
     font-size: 2.5em;
     font-weight: bold;
-    color: #FF4500;
-    text-shadow: 0 0 10px #FFD700, 0 0 20px #FF4500, 0 0 30px #FF4500;
-    animation: pulse 2s infinite;
+    color: #FFD700;
+    text-shadow: 0 0 10px #FFD700, 0 0 20px #B8860B;
 }
 
-@keyframes pulse {
-    0% { text-shadow: 0 0 10px #FFD700, 0 0 20px #FF4500, 0 0 30px #FF4500; }
-    50% { text-shadow: 0 0 20px #FFD700, 0 0 30px #FF4500, 0 0 40px #FF4500; }
-    100% { text-shadow: 0 0 10px #FFD700, 0 0 20px #FF4500, 0 0 30px #FF4500; }
+/* DLC Category - More Noticeable */
+.dlc {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #33A1FF;
+}
+
+/* Hall of Fame - Beautiful Font and Glow */
+.hall-of-fame {
+    font-size: 3em;
+    font-weight: bold;
+    color: #ffcc00;
+    text-shadow: 0 0 10px #ff6600, 0 0 20px #ff3300, 0 0 30px #ff3300;
+    font-family: "Cinzel", serif;
+    letter-spacing: 3px;
 }
 
 /* Game Grid */
@@ -106,8 +89,8 @@ a:hover {
 }
 
 .icon {
-    width: 220px;
-    height: 220px;
+    width: 150px; /* Reduced size */
+    height: 150px;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
@@ -147,4 +130,15 @@ a:hover {
 .icon:hover .info {
     display: block;
     opacity: 1;
+}
+
+/* Crown and Hitless Logo - Small and Cutout Effect */
+.icon .badge {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 20px; /* Smaller */
+    height: 20px;
+    mix-blend-mode: difference;
+    opacity: 0.8;
 }

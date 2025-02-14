@@ -15,7 +15,7 @@ body {
     display: flex;
     flex-direction: column;
     position: relative;
-    padding-top: 30px; /* Keeps room for scaling */
+    padding-top: 30px;
 }
 
 /* Category Title Styling */
@@ -31,7 +31,7 @@ body {
     background: transparent;
     padding: 8px 20px; /* Reduced padding for closer spacing */
     margin-left: 20px;
-    margin-bottom: 0; /* Removed margin below title */
+    margin-bottom: 2px; /* Tighter margin */
     z-index: 10;
 }
 
@@ -39,7 +39,7 @@ body {
 .category {
     display: flex;
     flex-direction: column;
-    gap: 5px; /* Reduced vertical space between categories */
+    gap: 2px; /* Further reduced vertical space between categories */
     overflow-x: auto;
     padding-left: 10px; /* Reduced left padding */
     padding-right: 10px; /* Reduced right padding */
@@ -85,7 +85,7 @@ body {
 .icon-grid {
     display: flex;
     flex-wrap: nowrap;
-    gap: 8px; /* Reduced gap between icons */
+    gap: 5px; /* Reduced gap between icons */
     padding: 0 10px; /* Reduced padding */
     align-items: center;
     overflow: visible;
@@ -153,28 +153,6 @@ body {
 
 .category .icon-grid {
     display: flex;
-    gap: 8px; /* Even tighter spacing between icons */
+    gap: 5px; /* Even tighter spacing between icons */
     align-items: center;
-}
-
-/* Platinum Category - Color and Special Effects */
-.category .platinum h2 {
-    color: #78aaff;
-}
-
-/* Completed Category - Color */
-.category .completed h2 {
-    color: #caa145;
-}
-
-/* DLC Category - Color */
-.category .dlc h2 {
-    color: #4a8cff;
-}
-
-/* Hall of Fame Category - Color and Font */
-.category .hall-of-fame h2 {
-    color: #ffcc00;
-    font-family: "Garamond", serif;
-    letter-spacing: 2px;
 }

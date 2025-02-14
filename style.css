@@ -14,24 +14,33 @@ body {
 .category-container {
     display: flex;
     flex-direction: column;
-    overflow: visible;
     position: relative;
-    padding-left: 20px; /* Ensures icons align */
-    padding-top: 30px; /* Adjust to allow room for scaling */
-    padding-bottom: 30px; /* Adjust to allow room for scaling */
+    padding-top: 30px; /* Keeps room for scaling */
+    padding-bottom: 30px; 
+}
+
+.category-title {
+    font-size: 1.2em;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-family: "Playfair Display", serif;
+    text-align: left;
+    padding: 5px 20px;
+    width: 250px; /* Fixed width for alignment */
 }
 
 .category {
-    margin: 20px 0;
-    padding: 10px 0;
-    overflow: visible;
-    white-space: nowrap;
     display: flex;
     gap: 15px;
-    scrollbar-width: none; /* Hide scrollbar */
+    overflow-x: auto;
+    padding-left: 250px; /* Matches title width */
+    scrollbar-width: none;
     -ms-overflow-style: none;
     cursor: grab;
     align-items: center;
+}
+
 }
 .category::-webkit-scrollbar {
     display: none;

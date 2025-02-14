@@ -107,6 +107,10 @@ body {
 
 .hall-of-fame .icon-grid {
     justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    align-items: center;
 }
 
 .icon {

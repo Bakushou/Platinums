@@ -14,15 +14,17 @@ body {
 .category-container {
     display: flex;
     flex-direction: column;
-    overflow: hidden;
+    overflow: visible;
     position: relative;
     padding-left: 20px; /* Ensures icons align */
+    padding-top: 30px; /* Adjust to allow room for scaling */
+    padding-bottom: 30px; /* Adjust to allow room for scaling */
 }
 
 .category {
     margin: 20px 0;
     padding: 10px 0;
-    overflow-x: auto;
+    overflow: visible;
     white-space: nowrap;
     display: flex;
     gap: 15px;
@@ -67,7 +69,7 @@ body {
 }
 
 /* DLC Category - More Noticeable */
-.dlc {
+dlc {
     font-size: 1.4em;
     font-weight: bold;
     color: #4a8cff;
@@ -87,8 +89,9 @@ body {
     display: flex;
     flex-wrap: nowrap;
     gap: 15px;
-    padding: 10px 20px;
+    padding: 20px 20px; /* Increase padding to avoid clipping */
     align-items: center;
+    overflow: visible;
 }
 
 .icon {

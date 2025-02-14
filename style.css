@@ -1,6 +1,8 @@
 /* General Reset */
 body {
-    background: linear-gradient(to bottom, #cce7ff, #f3e7ff); /* Soft pastel blue to lavender */
+    background: linear-gradient(to bottom, #cce7ff, #f3e7ff);
+    background-attachment: fixed; /* Ensures a smooth, non-repeating gradient */
+    background-size: cover;
     color: #333; /* Dark gray for better readability */
     font-family: "Inter", sans-serif; /* Clean and modern font */
     margin: 0;

@@ -35,7 +35,7 @@ body {
     flex-wrap: wrap;
     justify-content: flex-start;
     gap: 15px;
-    padding-left: 20px; /* Adjusted closer to the left edge */
+    padding-left: 50px; /* Adjusted closer to the left edge */
     scrollbar-width: none;
     -ms-overflow-style: none;
     cursor: grab;

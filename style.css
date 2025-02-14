@@ -8,7 +8,7 @@ body {
     margin: 0;
     padding: 0;
     text-align: center;
-    overflow: hidden; /* Prevents the whole page from scrolling */
+    overflow: hidden;
 }
 
 /* Category Styling */
@@ -17,12 +17,12 @@ body {
     flex-direction: column;
     position: relative;
     padding-top: 30px;
-    padding-bottom: 30px;
+    padding-bottom: 10px; /* Reduced bottom padding */
 }
 
 /* Uniform category text size */
 .category h2 {
-    font-size: 1.4em; /* Set a consistent size for all category titles */
+    font-size: 1.4em;
     text-transform: uppercase;
     font-weight: bold;
     letter-spacing: 1px;
@@ -33,7 +33,8 @@ body {
     background: transparent;
     padding: 5px 20px;
     z-index: 10;
-    margin-left: 20px; /* Ensure it starts on the left side */
+    margin-left: 20px;
+    margin-bottom: 10px; /* Reduced bottom margin between categories */
 }
 
 /* Category Flexbox & Scrolling */
@@ -48,9 +49,9 @@ body {
     cursor: grab;
     align-items: center;
     width: 100%;
-    height: 320px; /* Set a height for each category to make it scrollable */
-    margin-left: 20px; /* Align the scrolling content to match the title */
-    flex-wrap: nowrap; /* Ensures that the icons stay in a single row */
+    height: 320px;
+    margin-left: 20px;
+    flex-wrap: nowrap;
 }
 
 /* Remove scrollbar visually */
@@ -92,9 +93,9 @@ body {
 /* Game Grid */
 .icon-grid {
     display: flex;
-    flex-wrap: nowrap; /* Prevents wrapping of icons */
+    flex-wrap: nowrap;
     gap: 15px;
-    padding: 40px 20px;
+    padding: 0 20px; /* Removed extra padding */
     align-items: center;
     overflow: visible;
     width: 100%;
@@ -109,7 +110,7 @@ body {
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out;
     position: relative;
-    flex-shrink: 0; /* Prevents icons from shrinking */
+    flex-shrink: 0;
 }
 
 /* Hover effect for icons */
@@ -152,7 +153,7 @@ body {
 /* Mouse drag scrolling functionality */
 .category {
     overflow-x: scroll;
-    scroll-behavior: smooth; /* Smooth scrolling */
+    scroll-behavior: smooth;
 }
 
 .category:hover {

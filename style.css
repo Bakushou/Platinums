@@ -30,21 +30,23 @@ body {
     width: 250px;
 }
 
+/* Prevent wrapping and enable horizontal scrolling */
 .category {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
+    flex-wrap: nowrap; /* Prevent wrapping */
+    overflow-x: auto;  /* Allow horizontal scrolling */
     gap: 15px;
     padding-left: 50px;
+    align-items: center;
     scrollbar-width: none;
     -ms-overflow-style: none;
     cursor: grab;
-    align-items: center;
 }
 
 .category::-webkit-scrollbar {
     display: none;
 }
+
 .category:active {
     cursor: grabbing;
 }
@@ -97,22 +99,23 @@ body {
 /* Game Grid */
 .icon-grid {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;  /* Prevent wrapping */
     gap: 15px;
     padding: 20px 20px;
     align-items: center;
-    overflow: visible;
-    justify-content: flex-start;
+    white-space: nowrap; /* Prevent wrapping within the grid */
 }
 
+/* Hall of Fame - Centered Icons */
 .hall-of-fame .icon-grid {
     justify-content: center;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     gap: 15px;
     align-items: center;
 }
 
+/* Individual Icon Styling */
 .icon {
     width: 160px;
     height: 160px;

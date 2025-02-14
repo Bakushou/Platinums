@@ -89,10 +89,11 @@ dlc {
     display: flex;
     flex-wrap: nowrap;
     gap: 15px;
-    padding: 20px 20px; /* Increase padding to avoid clipping */
+    padding: 40px 20px; /* Increased padding */
     align-items: center;
     overflow: visible;
 }
+
 
 .icon {
     width: 160px;
@@ -107,7 +108,9 @@ dlc {
 .icon:hover {
     transform: scale(1.4);
     box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.3);
+    z-index: 20;
 }
+
 
 .icon img {
     width: 100%;

@@ -186,3 +186,39 @@ body {
 .icon:hover .heart {
     filter: brightness(1) invert(0); /* Turns the heart back to its original red color */
 }
+
+/* Crown Cutout Feature */
+.icon .crown {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 10px;
+    right: 10px;
+    background: url('Crown.png') no-repeat center;
+    background-size: contain;
+    filter: brightness(0) invert(1); /* Makes the crown fully white */
+    transition: filter 0.3s ease-in-out;
+    z-index: 30;
+}
+
+.icon:hover .crown {
+    filter: brightness(1) invert(0); /* Turns the crown back to its original color */
+}
+
+/* Team Hitless Cutout Feature */
+.icon .team-hitless {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    bottom: 10px;
+    right: 10px;
+    background: url('TeamHitless.png') no-repeat center;
+    background-size: contain;
+    filter: brightness(0) invert(1); /* Makes the Team Hitless icon fully white */
+    transition: filter 0.3s ease-in-out;
+    z-index: 30;
+}
+
+.icon:hover .team-hitless {
+    filter: brightness(1) invert(0); /* Turns the Team Hitless icon back to its original color */
+}

@@ -27,7 +27,7 @@ body {
     font-family: "Playfair Display", serif;
     text-align: left;
     padding: 5px 20px;
-    width: 150px;
+    width: 100px;
 }
 
 /* General Category Styling */
@@ -40,7 +40,7 @@ body {
     scrollbar-width: none;
     -ms-overflow-style: none;
     cursor: grab;
-    margin-bottom: 30px; /* Add space between categories */
+    margin-bottom: 20px; /* Add space between categories */
     position: relative;
     white-space: nowrap; /* Prevent content from wrapping */
 }

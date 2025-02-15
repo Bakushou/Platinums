@@ -170,6 +170,7 @@ body {
 }
 
 /* Heart Cutout Feature */
+/* Heart Cutout Feature */
 .icon .heart {
     position: absolute;
     width: 30px;
@@ -178,11 +179,19 @@ body {
     left: 10px;
     background: url('Heart.png') no-repeat center;
     background-size: contain;
-    transition: filter 0.3s ease-in-out;
+    -webkit-mask-image: url('Heart.png');
+    mask-image: url('Heart.png');
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+    background-color: white;
+    transition: background-color 0.3s ease-in-out;
     z-index: 30;
 }
 
 .icon:hover .heart {
-    filter: hue-rotate(0deg) brightness(1.5) saturate(2);
+    background-color: red;
 }
-

@@ -34,7 +34,7 @@ body {
 .category {
     display: flex;
     flex-direction: column;  /* Stack heading and icons vertically */
-    overflow-x: auto;  /* Allow horizontal scrolling */
+  /* Allow horizontal scrolling */
     gap: 15px;
     padding-left: 10px; /* Small padding for left margin */
     align-items: flex-start; /* Align icons to the left */

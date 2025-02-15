@@ -151,8 +151,8 @@ body {
     transform: translateX(-50%);
     background: rgba(0, 0, 0, 0.8);
     color: white;
-    font-size: 0.7em;
-    padding: 6px;
+    font-size: 0.5em;
+    padding: 5px;
     border-radius: 5px;
     width: 120px; /* Adjust width to ensure wrapping */
     text-align: center;

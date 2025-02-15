@@ -30,20 +30,21 @@ body {
     width: 250px;
 }
 
-/* Prevent wrapping and enable horizontal scrolling */
+/* General Category Styling */
 .category {
     display: flex;
     flex-direction: column;  /* Stack heading and icons vertically */
-    flex-wrap: nowrap; /* Prevent wrapping */
     overflow-x: auto;  /* Allow horizontal scrolling */
     gap: 15px;
-    padding-left: 50px;
-    align-items: center;
+    padding-left: 10px; /* Small padding for left margin */
+    align-items: flex-start; /* Align icons to the left */
     scrollbar-width: none;
     -ms-overflow-style: none;
     cursor: grab;
+    margin-bottom: 30px; /* Add space between categories */
 }
 
+/* Hide scrollbar */
 .category::-webkit-scrollbar {
     display: none;
 }
@@ -64,31 +65,29 @@ body {
     background: transparent;
     padding: 10px 20px;
     z-index: 10;
-    margin-bottom: 10px; /* Ensure some space below the heading */
+    margin-bottom: 10px;
 }
 
-/* Platinum Category - Standout Blue */
+/* Category Titles */
 .platinum {
     font-size: 1.4em;
     font-weight: bold;
     color: #78aaff;
 }
 
-/* Completed Category - Luxurious Gold */
 .completed {
     font-size: 1.4em;
     font-weight: bold;
     color: #caa145;
 }
 
-/* DLC Category - More Noticeable */
 .dlc {
     font-size: 1.4em;
     font-weight: bold;
     color: #4a8cff;
 }
 
-/* Hall of Fame - Unique and Professional */
+/* Hall of Fame - Centered */
 .hall-of-fame {
     font-size: 1.4em;
     font-weight: bold;
@@ -98,26 +97,22 @@ body {
     text-align: center;
 }
 
-/* Game Grid */
+/* Game Grid Styling */
 .icon-grid {
     display: flex;
-    flex-wrap: nowrap;  /* Prevent wrapping */
+    flex-wrap: nowrap; /* Prevent wrapping */
     gap: 15px;
-    padding: 20px 10px;  /* Add a small padding on the left and right */
+    padding: 20px;
     align-items: center;
-    white-space: nowrap; /* Prevent wrapping within the grid */
+    justify-content: flex-start; /* Align to the left for all but Hall of Fame */
 }
 
-/* Hall of Fame - Centered Icons */
+/* Hall of Fame Grid - Centered */
 .hall-of-fame .icon-grid {
-    justify-content: center;  /* Center the Hall of Fame icons */
-    display: flex;
-    flex-wrap: nowrap;
-    gap: 15px;
-    align-items: center;
+    justify-content: center; /* Center the Hall of Fame icons */
 }
 
-/* Individual Icon Styling */
+/* Icon Styling */
 .icon {
     width: 160px;
     height: 160px;
@@ -128,6 +123,7 @@ body {
     position: relative;
 }
 
+/* Hover Effects */
 .icon:hover {
     transform: scale(1.4);
     box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.3);
@@ -158,18 +154,8 @@ body {
     transition: opacity 0.3s;
 }
 
+/* Show Tooltip on Hover */
 .icon:hover .info {
     display: block;
     opacity: 1;
-}
-
-/* Crown and Hitless Logo - Small and Cutout Effect */
-.icon .badge {
-    position: absolute;
-    top: 5px;
-    left: 5px;
-    width: 15px;
-    height: 15px;
-    mix-blend-mode: difference;
-    opacity: 0.8;
 }

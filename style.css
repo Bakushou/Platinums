@@ -42,7 +42,6 @@ body {
     cursor: grab;
     margin-bottom: 30px; /* Add space between categories */
     position: relative;
-    overflow-x: auto; /* Allow horizontal scrolling within each category */
     white-space: nowrap; /* Prevent content from wrapping */
 }
 
@@ -109,7 +108,6 @@ body {
     justify-content: flex-start; /* Align to the left for all but Hall of Fame */
     position: relative;
     z-index: 1;
-    overflow-x: auto; /* Allow horizontal scrolling */
     white-space: nowrap; /* Ensure all items stay in one line */
 }
 
@@ -148,13 +146,13 @@ body {
 .icon .info {
     display: block;
     position: absolute;
-    bottom: 100%; /* Move tooltip fully above the icon */
+    bottom: -50px;
     left: 50%;
     transform: translateX(-50%);
     background: rgba(0, 0, 0, 0.8);
     color: white;
-    font-size: 0.9em;
-    padding: 8px;
+    font-size: 7em;
+    padding: 6px;
     border-radius: 5px;
     width: 120px; /* Adjust width to ensure wrapping */
     text-align: center;

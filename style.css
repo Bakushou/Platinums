@@ -168,3 +168,21 @@ body {
 .icon:hover .info {
     opacity: 1;
 }
+
+/* Heart Cutout Feature */
+.icon .heart {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 10px;
+    left: 10px;
+    background: url('Heart.png') no-repeat center;
+    background-size: contain;
+    transition: filter 0.3s ease-in-out;
+    z-index: 30;
+}
+
+.icon:hover .heart {
+    filter: hue-rotate(0deg) brightness(1.5) saturate(2);
+}
+

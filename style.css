@@ -194,7 +194,7 @@ body {
     height: 30px;
     top: 10px;
     right: 10px;
-    background: url('Crown.png') no-repeat center;
+    background: url('crown.png') no-repeat center;
     background-size: contain;
     filter: brightness(0) invert(1); /* Makes the crown fully white */
     transition: filter 0.3s ease-in-out;
@@ -212,7 +212,7 @@ body {
     height: 30px;
     bottom: 10px;
     right: 10px;
-    background: url('TeamHitless.png') no-repeat center;
+    background: url('team_hitless_logo.png') no-repeat center;
     background-size: contain;
     filter: brightness(0) invert(1); /* Makes the Team Hitless icon fully white */
     transition: filter 0.3s ease-in-out;

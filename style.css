@@ -34,7 +34,6 @@ body {
 .category {
     display: flex;
     flex-direction: column;  /* Stack heading and icons vertically */
-  /* Allow horizontal scrolling */
     gap: 15px;
     padding-left: 10px; /* Small padding for left margin */
     align-items: flex-start; /* Align icons to the left */
@@ -43,6 +42,8 @@ body {
     cursor: grab;
     margin-bottom: 30px; /* Add space between categories */
     position: relative;
+    overflow-x: auto; /* Allow horizontal scrolling within each category */
+    white-space: nowrap; /* Prevent content from wrapping */
 }
 
 /* Hide scrollbar */
@@ -108,6 +109,8 @@ body {
     justify-content: flex-start; /* Align to the left for all but Hall of Fame */
     position: relative;
     z-index: 1;
+    overflow-x: auto; /* Allow horizontal scrolling */
+    white-space: nowrap; /* Ensure all items stay in one line */
 }
 
 /* Hall of Fame Grid - Centered */
@@ -145,21 +148,22 @@ body {
 .icon .info {
     display: block;
     position: absolute;
-    bottom: -50px;
+    bottom: 100%; /* Move tooltip fully above the icon */
     left: 50%;
     transform: translateX(-50%);
     background: rgba(0, 0, 0, 0.8);
     color: white;
-    font-size: 0.7em;
-    padding: 6px;
+    font-size: 0.9em;
+    padding: 8px;
     border-radius: 5px;
-    width: 90%;
+    width: 120px; /* Adjust width to ensure wrapping */
     text-align: center;
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
     pointer-events: none;
-    z-index: 20;
-    white-space: nowrap;
+    z-index: 25;
+    white-space: normal; /* Ensure wrapping */
+    word-wrap: break-word; /* Break long words if necessary */
 }
 
 /* Show Tooltip on Hover */

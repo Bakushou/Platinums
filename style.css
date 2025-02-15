@@ -33,8 +33,7 @@ body {
 /* General Category Styling */
 .category {
     display: flex;
-    flex-direction: column;  /* Stack heading and icons vertically */
-    overflow-x: auto;  /* Allow horizontal scrolling */
+    flex-wrap: wrap; /* Allow wrapping */
     gap: 15px;
     padding-left: 10px; /* Small padding for left margin */
     align-items: flex-start; /* Align icons to the left */
@@ -42,6 +41,7 @@ body {
     -ms-overflow-style: none;
     cursor: grab;
     margin-bottom: 30px; /* Add space between categories */
+    overflow: visible; /* Allow icons to expand beyond */
 }
 
 /* Hide scrollbar */
@@ -100,7 +100,7 @@ body {
 /* Game Grid Styling */
 .icon-grid {
     display: flex;
-    flex-wrap: nowrap; /* Prevent wrapping */
+    flex-wrap: wrap; /* Allow wrapping */
     gap: 15px;
     padding: 20px;
     align-items: center;
@@ -129,7 +129,7 @@ body {
 .icon:hover {
     transform: scale(1.4);
     box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.3);
-    z-index: 2; /* Ensure icons are above the description */
+    z-index: 10; /* Ensure icons are above the description */
 }
 
 /* Image Style */
